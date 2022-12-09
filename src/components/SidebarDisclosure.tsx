@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { GiHamburgerMenu } from "react-icons/gi";
+import { GiHamburgerMenu } from "react-icons/gi/index.js";
 import { Disclosure } from "@headlessui/react";
 import {
   MdOutlineAnalytics,
@@ -7,11 +7,11 @@ import {
   MdOutlineSettings,
   MdOutlineLogout,
   MdNotificationsNone,
-} from "react-icons/md";
+} from "react-icons/md/index.js";
 
-import { TbSearch, TbBrandNextjs } from "react-icons/tb";
-import { AiOutlineHome } from "react-icons/ai";
-import { IoMdHeartEmpty } from "react-icons/io";
+import { TbSearch, TbBrandNextjs } from "react-icons/tb/index.js";
+import { AiOutlineHome } from "react-icons/ai/index.js";
+import { IoMdHeartEmpty } from "react-icons/io/index.js";
 
 
 
