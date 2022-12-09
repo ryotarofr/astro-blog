@@ -1,0 +1,78 @@
+---
+import { Image } from "@astrojs/image/components";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../../config";
+import BaseHead from "../components/BaseHead.astro";
+import Body from "../components/Body.astro";
+import Content from "../components/Content.astro";
+import Header from "../components/Header.astro";
+import Sidebar from "../components/Sidebar.astro";
+import "../styles/markdown.css";
+
+const sortNewDatePosts = (await Astro.glob("./posts/*.md")).sort(
+  (a: any, b: any) =>
+    new Date(b.frontmatter.createdAt).valueOf() -
+    new Date(a.frontmatter.createdAt).valueOf()
+);
+
+const posts = sortNewDatePosts.slice(0, 15);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <Body>
+    <Header title={SITE_TITLE} />
+    <Sidebar />
+    <main class="pt-[56px] lg:pl-60 flex justify-center md:block">
+      <Content>
+        <h1 class="h-40"></h1>
+        <section>
+          <ul class="grid grid-cols-1 gap-4">
+            {
+              posts.map((post) => (
+                <li class="mb-4">
+                  <a href={post.url} class="md:flex">
+                    <Image
+                      class="my-auto w-5/6 lg:h-44 lg:w-80 md:h-36 md:w-60 border border-slate-300 dark:border-zinc-700 rounded-xl mx-auto object-fit"
+                      src={post.frontmatter.heroImage}
+                      width={300}
+                      aspectRatio={2.0}
+                      alt="Thumbnail"
+                    />
+                    <div class="ml-4 mt-1">
+                      <div class="text-sm">
+                        {post.frontmatter.createdAt.substring(0, 10)}
+                        {post.frontmatter.updatedAt && (
+                          <nobr>
+                            (更新：{post.frontmatter.updatedAt.substring(0, 10)}
+                            )
+                          </nobr>
+                        )}
+                      </div>
+                      <div class="line-clamp-2 my-1 text-xl font-bold">
+                        {post.frontmatter.title}
+                      </div>
+                      {post.frontmatter.description && (
+                        <div class="opacity-70 line-clamp-3">
+                          {post.frontmatter.description}
+                        </div>
+                      )}
+
+                      {post.frontmatter.tags && (
+                        <div class="mt-1 opacity-70 line-clamp-2 text-blue-500">
+                          #{post.frontmatter.tags}
+                        </div>
+                      )}
+                    </div>
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </section>
+      </Content>
+    </main>
+  </Body>
+</html>

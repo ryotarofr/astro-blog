@@ -1,0 +1,30 @@
+---
+import { TbBrandNextjs, TbSearch } from "react-icons/tb";
+import DropdownMenu from "./DropdownMenu";
+import ThemeToggle from "./ThemeToggleButton";
+---
+
+<header>
+  <nav class="fixed w-full pt-3 z-20">
+    <div class="flex justify-between">
+      <a href="/" class="pl-10">
+        <h1
+          class="flex text-md sss:text-base cursor-pointer font-bold border-gray-100 pt-3 pl-6 lg:invisible"
+        >
+          Ryotaro Fujii
+          <TbBrandNextjs className="lg:invisible" />
+        </h1>
+      </a>
+      <div class="flex justify-items-end sss:pr-6 pr-2">
+        <a href="/" class="sss:pr-6 pr-2 pt-1">
+          <button
+            class="text-xs sss:text-base px-2 py-1 sss:px-4 sss:py-2 cursor-pointer font-bold border border-gray-900 dark:border-gray-100 hover:bg-blue-700 hover:text-white rounded-3xl"
+          >
+            Sign in
+          </button>
+        </a>
+        <ThemeToggle client:visible />
+      </div>
+    </div>
+  </nav>
+</header>
