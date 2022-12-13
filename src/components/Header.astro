@@ -2,6 +2,8 @@
 import { TbBrandNextjs } from "react-icons/tb/index.js";
 
 import ThemeToggle from "./ThemeToggleButton";
+
+const LP_URL = "https://lp-596g3cidi-ryotarofr.vercel.app/";
 ---
 
 <header>
@@ -16,11 +18,11 @@ import ThemeToggle from "./ThemeToggleButton";
         </h1>
       </a>
       <div class="flex justify-items-end sss:pr-6 pr-2">
-        <a href="/" class="sss:pr-6 pr-2 pt-1">
+        <a href={LP_URL} class="sss:pr-6 pr-2 pt-1">
           <button
             class="text-xs sss:text-base px-2 py-1 sss:px-4 sss:py-2 cursor-pointer font-bold border border-gray-900 dark:border-gray-100 hover:bg-blue-700 hover:text-white rounded-3xl"
           >
-            Sign in
+            参加する
           </button>
         </a>
         <ThemeToggle client:visible />

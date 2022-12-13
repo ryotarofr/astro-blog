@@ -8,7 +8,7 @@ createdAt: 2022-11-30
 
 tags:
   - Desk
-heroImage: /public/test.jpg
+heroImage: /test.jpg
 slug: vibram-fivefingers-kmd-sport
 ---
 

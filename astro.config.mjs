@@ -9,7 +9,7 @@ import gfm from "remark-gfm";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://uses.craftz.dog/",
+  site: "https://fr-next.com",
   integrations: [
     sitemap(),
     react(),
