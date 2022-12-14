@@ -46,39 +46,39 @@ export default function SidebarDisclosure() {
                 className="flex mb-2 justify-start items-center gap-4 pl-5 hover:bg-zinc-900 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto"
               >
                 <TbSearch className="text-2xl group-hover:text-white" />
-                <h3 className="sss:text-base text-xs group-hover:text-white font-semibold">検索</h3>
+                <a href='/search' className="sss:text-base text-xs group-hover:text-white font-semibold">検索</a>
               </div>
               <div
                 className="flex mb-2 justify-start items-center gap-4 pl-5 hover:bg-zinc-900 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto"
               >
                 <AiOutlineHome className="text-2xl group-hover:text-white " />
-                <h3 className="sss:text-base text-xs group-hover:text-white font-semibold">
+                <a href='/dashboad' className="sss:text-base text-xs group-hover:text-white font-semibold">
                   ダッシュボード
-                </h3>
+                </a>
               </div>
               <div
                 className="flex mb-2 justify-start  items-center gap-4 pl-5 hover:bg-zinc-900 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto"
               >
                 <MdNotificationsNone className="text-2xl  group-hover:text-white " />
-                <h3 className="sss:text-base text-xs group-hover:text-white font-semibold">通知</h3>
+                <a href='/message' className="sss:text-base text-xs group-hover:text-white font-semibold">通知</a>
               </div>
               <div
                 className="flex mb-2 justify-start  items-center gap-4 pl-5 hover:bg-zinc-900 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto"
               >
                 <MdOutlineAnalytics className="text-2xl  group-hover:text-white " />
-                <h3 className="sss:text-base text-xs group-hover:text-white font-semibold">分析</h3>
+                <a href='/analysis' className="sss:text-base text-xs group-hover:text-white font-semibold">分析</a>
               </div>
               <div
                 className="flex mb-2 justify-start items-center gap-4 pl-5 hover:bg-zinc-900 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto"
               >
                 <IoMdHeartEmpty className="text-2xl group-hover:text-white " />
-                <h3 className="sss:text-base text-xs group-hover:text-white font-semibold">
+                <a href='/favorite' className="sss:text-base text-xs group-hover:text-white font-semibold">
                   お気に入り
-                </h3>
+                </a>
               </div>
             </div>
             {/* setting  */}
-            <div className="my-4 border-b border-gray-100 pb-4">
+            {/* <div className="my-4 border-b border-gray-100 pb-4">
               <div
                 className="flex mb-2 justify-start items-center gap-4 pl-5 hover:bg-zinc-900 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto"
               >
@@ -93,16 +93,16 @@ export default function SidebarDisclosure() {
                 <MdOutlineMoreHoriz className="text-2xl group-hover:text-white " />
                 <h3 className="sss:text-base text-xs group-hover:text-white font-semibold">More</h3>
               </div>
-            </div>
+            </div> */}
             {/* logout */}
-            <div className="my-4">
+            {/* <div className="my-4">
               <div
                 className="flex mb-2 justify-start items-center gap-4 pl-5 border border-gray-200 hover:bg-zinc-900 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto"
               >
                 <MdOutlineLogout className="text-2xl group-hover:text-white " />
                 <h3 className="sss:text-base text-xs group-hover:text-white font-semibold">Logout</h3>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </Disclosure>
