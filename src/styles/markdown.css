@@ -76,8 +76,10 @@
   border: 0;
 }
 .markdown img {
-  width: 100%;
-  height: auto;
+  margin: auto;
+  width: 80%;
+  /* height: 300px; */
+  object-fit: cover;
   border-radius: 10px;
 }
 .markdown blockquote {
